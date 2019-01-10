@@ -1,6 +1,5 @@
 import React from 'react';
 
-
 class PokemonIndex extends React.Component {
     componentDidMount() {
         this.props.requestAllPokemon();
