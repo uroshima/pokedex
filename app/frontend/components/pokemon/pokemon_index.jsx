@@ -6,10 +6,12 @@ class PokemonIndex extends React.Component {
     }
     render() {
         const mappedPokemons = this.props.pokemon.map((poke, idx) => {
-                return <li key={idx}>
-                        {poke.name}
-                        {poke.image_url}
-                       </li>
+            return (
+                        <li key={idx}>
+                            {poke.name}
+                            {poke.image_url}
+                        </li>
+            )
             })
         return (
             <div>
