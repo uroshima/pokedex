@@ -11,8 +11,4 @@ const PokemonIndexItem = ({ pokemon }) => {
            </li>;
 }
 
-
-
-
-
 export default PokemonIndexItem
