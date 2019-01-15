@@ -6,11 +6,13 @@ import merge from "lodash/merge";
 
 const pokemonReducer = (state = {}, action) => {
     Object.freeze(state);
+    let poke;
     switch (action.type) {
         case RECEIVE_ALL_POKEMON:
             return merge({}, state, action.pokemon);
         case RECEIVE_SINGLE_POKEMON:
-            return merge({}, state, {[action.pokemon.id]: action.pokemon})
+            poke = action.payload.pokemon;
+            return merge({}, state, {[poke.id]: poke})
         default:
             return state; 
     }

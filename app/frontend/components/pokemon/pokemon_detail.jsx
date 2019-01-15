@@ -25,8 +25,11 @@ class PokemonDetail extends React.Component {
                 <li>
                     <h2>{pokemon.name}</h2>
                 </li>
-              <li>{pokemon.defense}</li>
-              <li>{pokemon.attack}</li>
+              <li>Type: {pokemon.poke_type}</li>
+              <li>Attack: {pokemon.attack}</li>
+              <li>Defense: {pokemon.defense}</li>
+              <li>Moves: {pokemon.moves.join(', ')}</li>
+              <li>Items: {pokemon.items}</li>
             </ul>
           </div>;
     }

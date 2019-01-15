@@ -8,9 +8,9 @@ export const receiveAllPokemon = pokemon => ({
     pokemon  
  });
 
- export const receiveSinglePokemon = pokemon => ({
+ export const receiveSinglePokemon = payload => ({
      type: RECEIVE_SINGLE_POKEMON,
-     pokemon 
+     payload 
  })
 
 export const requestAllPokemon = () => (dispatch) => (
@@ -18,8 +18,8 @@ export const requestAllPokemon = () => (dispatch) => (
         .then(pokemon => dispatch(receiveAllPokemon(pokemon)))
 );
 
-export const requestSinglePokemon = () => dispatch => (
-    ApiUtil.fetchSinglePokemon()
+export const requestSinglePokemon = (id) => dispatch => (
+    ApiUtil.fetchSinglePokemon(id)
         .then(pokemon => dispatch(receiveSinglePokemon(pokemon)))
 );
 
