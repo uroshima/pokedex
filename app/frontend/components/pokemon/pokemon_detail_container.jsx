@@ -7,6 +7,10 @@ const mapStateToProps = (state, ownProps) => {
     const paramsId = ownProps.match.params.pokemonId;
     const pokemon = state.entities.pokemon[paramsId];
     console.log("pokemon: ", pokemon)
+    console.log({
+        "pokemon": pokemon,
+        "items": selectPokeItems(state, pokemon)
+    });
     return {
         pokemon: pokemon,
         items: selectPokeItems(state, pokemon)

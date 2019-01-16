@@ -9,7 +9,7 @@ const itemsReducer = (state = {}, action) => {
 
     switch (action.type) {
         case RECEIVE_SINGLE_POKEMON:
-            items = action.payload.pokemon.items;
+            items = action.payload.items;
             return merge({}, state, items);
         default:
             return state;
